@@ -7,6 +7,7 @@ module.exports = {
           'error',
           {
             singleQuote: true,
+            arrowParens: 'avoid',
           },
         ],
       },
