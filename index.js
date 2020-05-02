@@ -1,27 +1,33 @@
-const base = {
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
+
+
+const parserOptions = {
+  ecmaVersion: 2018,
+  sourceType: 'module',
+  ecmaFeatures: {
+    jsx: true,
   },
-  rules: {
-    'no-unused-vars': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        tabWidth: 2,
-        semi: true,
-        singleQuote: true,
-        arrowParens: 'avoid',
-        printWidth: 100,
-        trailingComma: 'all',
-        endOfLine: 'auto',
-        bracketSpacing: true
-      }
-    ]
-  }
+}
+
+const rules = {
+  'no-unused-vars': 'off',
+  'prettier/prettier': [
+    'error',
+    {
+      tabWidth: 2,
+      semi: true,
+      singleQuote: true,
+      arrowParens: 'avoid',
+      printWidth: 100,
+      trailingComma: 'all',
+      endOfLine: 'auto',
+      bracketSpacing: true
+    }
+  ]
+}
+
+const base = {
+  parserOptions,
+  rules
 }
 
 module.exports = {
@@ -60,17 +66,28 @@ module.exports = {
       ],
     },
     react: {
-      ...base,
+      parserOptions,
+      rules: {
+        ...rules,
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn'
+      },
+      plugins: ['react-hooks'],
       extends: [
         'eslint:recommended',
         'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
         'plugin:prettier/recommended',
         'prettier/react'
       ],
     },
     'react-ts': {
-      ...base,
+      parserOptions,
+      rules: {
+        ...rules,
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn'
+      },
+      plugins: ['react-hooks'],
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
