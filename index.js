@@ -51,9 +51,11 @@ module.exports = {
       ],
     },
     'vue-ts': {
+      ...base,
       extends: [
+        'plugin:vue/vue3-strongly-recommended',
         '@vue/typescript/recommended',
-        'plugin:mikiya/vue',
+        '@vue/prettier/recommended',
         '@vue/prettier/@typescript-eslint'
       ],
     },
@@ -66,20 +68,19 @@ module.exports = {
         'plugin:prettier/recommended',
         'prettier/react'
       ],
-      overrides: [
-        {
-          files: ['**/*.ts?(x)'],
-          parserOptions: {
-            warnOnUnsupportedTypeScriptVersion: true,
-          },
-          extends: [
-            'plugin:@typescript-eslint/eslint-recommended',
-            'plugin:@typescript-eslint/recommended',
-            'plugin:mikiya/react',
-            'prettier/@typescript-eslint'
-          ]
-        }
-      ]
     },
+    'react-ts': {
+      ...base,
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:prettier/recommended',
+        'prettier/@typescript-eslint',
+        'prettier/react'
+      ],
+    }
   }
 };
