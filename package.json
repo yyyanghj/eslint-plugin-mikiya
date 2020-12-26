@@ -4,7 +4,8 @@
   "description": "personal eslint plugin",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix ./examples"
   },
   "author": "yang",
   "license": "MIT",
@@ -27,5 +28,9 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "typescript": "^4.0.5"
   }
 }
