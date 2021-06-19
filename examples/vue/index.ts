@@ -1,10 +1,9 @@
-import type { Foo } from './type';
-
+// import type { Foo } from './type';
 
 const fnc = (_a: string) => {
   //
 };
 
-const a = ""
+const a = '';
 
 fnc('1');

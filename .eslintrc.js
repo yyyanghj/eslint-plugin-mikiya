@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ['./lib/configs/all.js'],
-};
+module.exports = require('./lib').configs.all;

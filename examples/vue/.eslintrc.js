@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ['../../lib/configs/vue.js'],
-};
+module.exports = require('../../lib').configs.vue;
