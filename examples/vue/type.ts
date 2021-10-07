@@ -1,1 +1,1 @@
-export type Foo = number;
+export type Message = string;

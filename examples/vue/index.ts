@@ -1,9 +1,9 @@
-// import type { Foo } from './type';
+// import type { Message } from './type';
 
 const fnc = (_a: string) => {
   //
 };
 
-const a = '';
+const b = '';
 
 fnc('1');

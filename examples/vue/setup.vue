@@ -1,11 +1,11 @@
 <template>
-  <div></div>
+  <div>{{ a }}</div>
 </template>
 
 <script setup lang="ts">
-import type { Foo } from './type';
+import type { Message } from './type';
 
-const a = '';
+const msg: Message = 'hello';
 </script>
 
 <style scoped></style>
