@@ -11,13 +11,13 @@
 
 <script lang="ts">
 export default {
-  name: 'Hello',
+  name: 'HelloWorld',
   setup() {
     return {
       show: false,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="" scoped></style>

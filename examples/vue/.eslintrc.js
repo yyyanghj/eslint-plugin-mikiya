@@ -1,1 +1,1 @@
-module.exports = require('../../lib').configs.vue;
+module.exports = require('../../lib').configs.vue

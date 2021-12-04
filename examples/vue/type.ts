@@ -1,1 +1,1 @@
-export type Message = string;
+export type Message = string

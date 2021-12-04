@@ -3,9 +3,11 @@
 </template>
 
 <script setup lang="ts">
-import type { Message } from './type';
+import type { Message } from './type'
 
-const msg: Message = 'hello';
+// type test = JSX.IntrinsicElements
+
+const msg: Message = 'hello'
 </script>
 
 <style scoped></style>

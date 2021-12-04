@@ -1,5 +1,5 @@
 const func = (_a: string) => {
   //
-};
+}
 
-func('1');
+func('1')
